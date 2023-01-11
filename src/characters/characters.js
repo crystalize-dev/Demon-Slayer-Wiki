@@ -38,7 +38,7 @@ export const characters = [
         color: "#fce874",
     },
     {
-        name: "giu",
+        name: "Giu",
         description: "“\t\n" +
             "Don't cry. Don't despair. Now's not the time for that. [...] Feel the rage. The powerful pure rage of not being able to forgive will become your unswerving drive to take action!\t”\n" +
             " \t\n" +

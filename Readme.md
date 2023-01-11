@@ -1,4 +1,5 @@
 Todo:
+- fix hell in css in HeroCard.jsx
 - Theme
 - Link anchors
 - full description
