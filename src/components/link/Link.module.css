@@ -1,0 +1,14 @@
+.link {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.link hr {
+    transition: all 0.2s ease 0s;
+    transform: scaleX(0);
+}
+
+.link:hover hr {
+    transform: scaleX(1);
+}

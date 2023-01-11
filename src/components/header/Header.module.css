@@ -1,0 +1,85 @@
+.header {
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    position: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 10%;
+    gap: 20px;
+
+    width: 50%;
+    min-width: fit-content;
+    height: 50px;
+
+    background: black;
+    border-radius: 0 0 30px 30px;
+
+    transition: all 0.3s ease 0s;
+    z-index: 9999;
+}
+.show {
+    transform: translateX(-50%) translateY(0);
+}
+.hide {
+    transform: translateX(-50%) translateY(calc(-100% - 30px));
+}
+
+.header a {
+    min-width: fit-content;
+}
+
+.roundWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    top: 10px;
+
+    min-width: 90px;
+    width: 90px;
+    min-height: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+
+    background: black;
+}
+
+.roundWrapper img {
+    height: 80%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.expander {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 40px;
+
+    background: black;
+    border-radius: 30px;
+
+    cursor: pointer;
+    user-select: none;
+}
+.rotate span {
+    transform: scale(1.2) rotate(180deg) !important;
+}
+.expander span {
+    transform: scale(1.2);
+
+    transition: all 0.3s ease 0s;
+}
