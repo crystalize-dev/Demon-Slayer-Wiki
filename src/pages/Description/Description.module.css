@@ -1,0 +1,85 @@
+.videoWrapper {
+    display: flex;
+    position: relative;
+
+    width: 620px;
+    height: 400px;
+
+    transition: all 0.3s ease 0s;
+}
+
+.video {
+    width: calc(100% - 50px);
+    height: 100%;
+}
+
+.fullScreen {
+    width: 90%;
+    height: 95%;
+}
+
+.fullScreenButton {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+}
+.fullScreenButton > span {
+    color: var(--color);
+
+    cursor: pointer;
+    transform: scale(1.3);
+
+    transition: all 0.3s ease 0s;
+}
+.fullScreenButton > span:hover {
+    transform: scale(1.5);
+}
+
+.descriptionWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 95%;
+    height: fit-content;
+}
+
+.descriptionWrapper img {
+    height: 80px;
+}
+
+.descriptionWrapper hr {
+    width: 90%;
+    margin: 20px 0;
+    border: 1px solid var(--color)
+}
+
+@media (max-width: 700px) {
+    .videoWrapper {
+        left: 28px;
+    }
+
+    .fullScreen {
+        width: 100%;
+        height: 100%;
+    }
+
+    .fullScreenButton {
+        right: 20px;
+        width: 35px;
+        height: 35px;
+    }
+    .fullScreenButton > span {
+        transform: none;
+    }
+    .fullScreenButton > span:hover {
+        transform: scale(1.2);
+    }
+}

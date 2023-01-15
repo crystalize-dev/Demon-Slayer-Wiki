@@ -1,28 +1,42 @@
-import './App.css';
-import {useState} from "react";
-import Header from "./components/header/Header";
-import HeroCard from "./components/heroCard/HeroCard";
+import {useEffect, useState} from "react";
+import {ThemeContext} from "./components/context/themeContext";
 
-import {characters} from "./characters/characters";
+import './App.css';
+
+import AppRouter from "./router/AppRouter";
+
 
 function App() {
+    const [theme, setTheme] = useState("dark")
     const [header, setHeader] = useState(true)
+    const root = document.getElementById("root")
 
-  return (
-      <div className="wrapper" onClick={() => setHeader(false)}>
-          <Header header={header} setHeader={setHeader} onClick={(e) => e.stopPropagation()}/>
+    const switchTheme = () => {
+        if (theme === "light") {
+            setTheme("dark")
+            localStorage.setItem('theme', 'dark')
+        }
+        else {
+            setTheme("light")
+            localStorage.setItem('theme', 'light')
+        }
+    }
+    useEffect(() => {
+        if (localStorage.getItem("theme"))
+            setTheme(localStorage.getItem("theme"))
+    }, [])
 
-          <div className="contentArea">
-              {
-                  characters.map(character => <HeroCard key={character.name}
-                                                        name={character.name}
-                                                        text={character.description}
-                                                        img={character.img}
-                                                        color={character.color}/>)
-              }
-          </div>
-      </div>
-  );
+    useEffect(() => {
+            root.setAttribute('data-theme', theme)
+    }, [theme, root])
+
+    return (
+        <ThemeContext.Provider value={{theme, switchTheme}}>
+            <div className="wrapper" onClick={() => setHeader(false)}>
+                <AppRouter header={header} setHeader={setHeader}/>
+            </div>
+        </ThemeContext.Provider>
+    );
 }
 
 export default App;

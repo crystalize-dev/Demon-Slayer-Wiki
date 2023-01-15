@@ -5,12 +5,15 @@ import classNames from 'classnames';
 
 import logo from "../../img/logo.png"
 import Icon from "../icon/icon";
+import ThemeSwitcher from "../themeSwitcher/themeSwitcher";
 
-const Header = ({header, setHeader, onClick}) => {
+const Header = ({header, setHeader}) => {
+
     return (
-        <header className={header ? classNames(cl.header, cl.show) : classNames(cl.header, cl.hide)} onClick={onClick}>
-            <Link>Home</Link>
-            <Link>Credits</Link>
+        <header className={header ? classNames(cl.header, cl.show) : classNames(cl.header, cl.hide)} onClick={(e) => e.stopPropagation()}>
+            <Link to="/">Description</Link>
+            <Link to="Characters">Characters</Link>
+
             <div className={cl.roundWrapper}>
                 <img src={logo} alt="logo" draggable={false}/>
 
@@ -18,8 +21,11 @@ const Header = ({header, setHeader, onClick}) => {
                     <Icon>expand_less</Icon>
                 </div>
             </div>
-            <Link>About</Link>
-            <Link>My profile</Link>
+
+            <Link to="Quotes">Quotes</Link>
+            <Link to="About">About me</Link>
+
+            <ThemeSwitcher/>
         </header>
     );
 };

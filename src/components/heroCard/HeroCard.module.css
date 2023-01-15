@@ -6,23 +6,66 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-
-    padding: 50px;
+    padding: 20px 30px;
 
     width: 23%;
-    min-width: 600px;
+    min-width: 300px;
     height: 400px;
-    max-height: 400px;
+    /*max-height: 400px;*/
 
-    background: linear-gradient(45deg, rgb(0, 0, 0) 1%, var(--color));
+    background: linear-gradient(60deg, black 1%, var(--color-card));
 }
 
-.cardWrapper h1, .cardWrapper p, .cardWrapper button {
+.content {
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
     filter: opacity(0);
     transition: all 0.3s ease 0s;
-    left: 100px;
 
     position: relative;
+    left: 100px;
+}
+.cardWrapper:hover .content {
+    filter: opacity(1);
+
+    left: 0;
+}
+.content p {
+    font-size: 12px;
+    color: white;
+}
+.content h1 {
+    font-size: 34px;
+    color: white;
+    font-weight: bold;
+}
+.content a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: black;
+
+    border-radius: 3px;
+    min-width: 100px;
+    width: 100px;
+    min-height: 35px;
+    height: 35px;
+    outline: none;
+    border: none;
+
+    background: white;
+
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
 }
 
 .cardWrapper img {
@@ -36,47 +79,58 @@
 
     transition: all 0.3s ease 0s;
     user-select: none;
+    pointer-events: none;
     z-index: 90;
 }
 .cardWrapper:hover img {
-    transform: translateX(90%);
+    transform: translateX(85%);
 
     height: 500px;
 }
 
-.cardWrapper:hover h1, .cardWrapper:hover p, .cardWrapper:hover button {
-    filter: opacity(1);
-    left: 0;
-}
-.cardWrapper button {
-    border-radius: 3px;
-    min-width: 100px;
-    width: 100px;
-    min-height: 35px;
-    height: 35px;
-    outline: none;
-    border: none;
-
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: auto;
-}
-.cardWrapper p {
-    font-size: 12px;
-    color: white;
-}
-.cardWrapper h1 {
-    font-size: 34px;
-    color: white;
-    font-weight: bold;
+@media (min-width: 700px) {
+    .cardWrapper {
+        min-width: 600px;
+    }
 }
 
-.content {
-    width: 50%;
-    height: 100%;
+@media (max-width: 700px) {
+    .cardWrapper {
+        width: 90%;
+        min-width: 200px;
+        transition: all 0.3s ease 0s;
+        height: 430px;
+    }
+    .cardWrapper:hover {
+        height: 630px;
+    }
 
-    display: flex;
-    flex-direction: column;
+    .content {
+        width: 100%;
 
-    gap: 20px;
+        filter: opacity(0);
+        transition: all 0.3s ease 0s;
+
+        position: relative;
+        left: 0;
+        margin-bottom: auto;
+    }
+    .cardWrapper:hover .content {
+        filter: opacity(1);
+    }
+    .cardWrapper:not(:hover) .content {
+        transition: all 0.1s ease 0s;
+    }
+    .content a {
+        margin-top: 0;
+    }
+
+    .cardWrapper img {
+        right: 45%;
+    }
+    .cardWrapper:hover img {
+        transform: translateX(50%);
+
+        height: 400px;
+    }
 }

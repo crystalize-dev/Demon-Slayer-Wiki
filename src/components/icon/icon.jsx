@@ -1,9 +1,10 @@
 import React from 'react';
 import "./icon.css"
+import classNames from "classnames";
 
-const Icon = ({children}) => {
+const Icon = ({children, ...props}) => {
     return (
-        <span className="material-symbols-outlined">
+        <span {...props} className={classNames("material-symbols-outlined", props.className)}>
             {children}
         </span>
     );

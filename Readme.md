@@ -1,7 +1,4 @@
 Todo:
-- fix hell in css in HeroCard.jsx
-- Theme
-- Link anchors
 - full description
+- Quotes page
 - My profile
-- MB logo?

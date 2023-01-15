@@ -1,12 +1,13 @@
 .link {
     cursor: pointer;
     text-decoration: none;
-    color: white;
+    color: var(--background);
 }
 
 .link hr {
     transition: all 0.2s ease 0s;
     transform: scaleX(0);
+    border: 1px solid var(--background)
 }
 
 .link:hover hr {

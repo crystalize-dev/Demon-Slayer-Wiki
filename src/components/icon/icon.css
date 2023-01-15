@@ -1,5 +1,5 @@
 .material-symbols-outlined {
-    color: white;
+    color: var(--background);
     font-variation-settings:
             'FILL' 0,
             'wght' 400,
