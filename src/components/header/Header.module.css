@@ -30,7 +30,8 @@
 
 .header a {
     min-width: fit-content;
-    font-size: calc(14px + 0.1vw);
+    font-size: calc(11px + 0.15vw);
+    font-weight: 600;
 }
 
 .roundWrapper {

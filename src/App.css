@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+a, img, button, span {
+    user-select: none;
+}
+
 #root[data-theme="light"] {
     --background:  #edf1f4;
     --color: black
