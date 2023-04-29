@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    height: 50px;
+}
+.wrapper p {
+    color: var(--font-color);
+}
+.wrapper > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.wrapper span {
+    color: #e1c300;
+    transform: scale(1.5);
+    cursor: pointer;
+}

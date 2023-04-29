@@ -1,5 +1,4 @@
 Todo:
 
-- full description
-- Quotes page
-- My profile
+- Singe Character page
+- About me page

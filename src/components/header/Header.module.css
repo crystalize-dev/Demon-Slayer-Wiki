@@ -1,37 +1,47 @@
 .header {
-    margin-left: 50%;
-    transform: translateX(-50%);
-
     position: fixed;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 40px;
-    gap: 10px;
-
-    width: 50%;
+    width: 100%;
     min-width: fit-content;
     height: 50px;
 
     background: var(--color);
-    border-radius: 0 0 30px 30px;
 
     transition: all 0.3s ease 0s;
     z-index: 9999;
+
+    user-select: none;
+}
+.container {
+    margin: 0 auto;
+    max-width: var(--content-width);
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+
 }
 .show {
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 .hide {
-    transform: translateX(-50%) translateY(calc(-100% - 30px));
+    transform: translateY(-100%);
+}
+
+.header h1 {
+    white-space: nowrap;
+    color: var(--red);
+    font-size: 26px;
 }
 
 .header a {
     min-width: fit-content;
-    font-size: calc(11px + 0.15vw);
+    font-size: 14px;
     font-weight: 600;
+    text-align: center;
 }
 
 .roundWrapper {
@@ -46,10 +56,6 @@
     width: 90px;
     min-height: 90px;
     height: 90px;
-
-    border-radius: 50%;
-
-    background: var(--color);
 }
 
 .roundWrapper img {
@@ -60,7 +66,7 @@
 
 .expander {
     position: absolute;
-    top: calc(100% + 10px);
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -72,6 +78,7 @@
     height: 40px;
 
     background: var(--color);
+    border: 1px solid var(--font-color);
     border-radius: 30px;
 
     cursor: pointer;
@@ -90,4 +97,12 @@
     transform: scale(1.2);
 
     transition: all 0.3s ease 0s;
+    color: var(--font-color);
+}
+
+
+@media (max-width: 850px) {
+    .header h1 {
+        display: none;
+    }
 }

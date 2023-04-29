@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import {ThemeContext} from "./components/context/themeContext";
+import {ThemeContext} from "./context/themeContext";
 
 import './App.css';
 

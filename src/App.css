@@ -11,14 +11,24 @@ a, img, button, span {
     user-select: none;
 }
 
+#root {
+    --content-width: 1000px;
+    --light-black: rgba(0,0,0,1);
+    --red: #ec1c26;
+}
+
 #root[data-theme="light"] {
-    --background:  #edf1f4;
-    --color: black
+    --background:  white;
+    --color: #edf1f4;
+    --font-color: black;
+    --border: 1px solid rgba(0,0,0,0.1)
 }
 
 #root[data-theme="dark"] {
     --background: black;
-    --color: #edf1f4;
+    --color: #16161a;
+    --font-color: white;
+    --border: 1px solid rgba(255,255,255,0.1)
 }
 
 .wrapper {
@@ -34,7 +44,6 @@ a, img, button, span {
 
     overflow-x: hidden;
     overflow-y: scroll;
-
     background: var(--background);
 }
 

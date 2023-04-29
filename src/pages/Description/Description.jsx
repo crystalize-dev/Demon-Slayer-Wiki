@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import cl from "./Description.module.css"
 import Icon from "../../components/icon/icon";
 import classNames from "classnames";
-import {ThemeContext} from "../../components/context/themeContext";
+import {ThemeContext} from "../../context/themeContext";
 import logo from "../../img/logo.png"
 
 const Description = () => {
@@ -11,17 +11,15 @@ const Description = () => {
 
     const goFullScreen = () => {
         if (theme !== "dark") switchTheme();
-        if (fullscreen && theme === "dark") switchTheme();
 
         setFullScreen(!fullscreen);
     }
+
     return (
-        <>
+        <div className={cl.wrapper}>
             <div className={fullscreen ? classNames(cl.videoWrapper, cl.fullScreen) : cl.videoWrapper}>
-                <iframe src="https://www.youtube.com/embed/VQGCKyvzIM4?start=6"
-                        title="YouTube video player"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowFullScreen className={cl.video}></iframe>
+                <iframe src="https://www.youtube.com/embed/VQGCKyvzIM4?start=6" allowFullScreen className={cl.video} title={"video"}/>
+
                 <div className={cl.fullScreenButton}>
                     <Icon onClick={() => goFullScreen()}>{fullscreen ? "fullscreen_exit" : "fullscreen"}</Icon>
                 </div>
@@ -45,7 +43,7 @@ const Description = () => {
                 </p>
                 <hr/>
             </div>
-        </>
+        </div>
     );
 };
 

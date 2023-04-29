@@ -1,0 +1,47 @@
+.wrapper {
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    padding: 120px 20px 20px 20px;
+
+    max-width: var(--content-width);
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    gap: 20px;
+}
+.header h1 {
+    color: var(--font-color);
+}
+.header button {
+    border: 2px solid var(--red);
+    color: var(--red);
+
+    padding: 5px 15px;
+
+    border-radius: 30px;
+    outline: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease 0s;
+}
+.header button:hover {
+    background: var(--red);
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding-bottom: 20px;
+}

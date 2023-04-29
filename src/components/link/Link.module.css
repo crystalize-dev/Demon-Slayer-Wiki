@@ -1,13 +1,13 @@
 .link {
     cursor: pointer;
     text-decoration: none;
-    color: var(--background);
+    color: var(--font-color);
 }
 
 .link hr {
     transition: all 0.2s ease 0s;
     transform: scaleX(0);
-    border: 1px solid var(--background)
+    border: 1px solid var(--font-color)
 }
 
 .link:hover hr {

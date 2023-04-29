@@ -14,6 +14,8 @@
 
     transition: all 0.2s ease 0s;
     cursor: pointer;
+
+    color: var(--font-color);
 }
 .wrapper > *:hover {
     transform: scale(1.2);

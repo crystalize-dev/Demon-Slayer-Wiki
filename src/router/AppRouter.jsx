@@ -10,6 +10,8 @@ import Layout from "../pages/Layout";
 import Characters from "../pages/Characters/Characters";
 import Description from "../pages/Description/Description";
 import SingleCharacter from "../pages/Characters/singleCharacter/singleCharacter";
+import Reviews from "../pages/Reviews/Reviews";
+import About from "../pages/About/About";
 
 const AppRouter = ({header, setHeader}) => {
     const router = createBrowserRouter(createRoutesFromElements(
@@ -17,8 +19,8 @@ const AppRouter = ({header, setHeader}) => {
             <Route index element={<Description />} />
             <Route path="Characters" element={<Characters />} />
             <Route path="Characters/:name" element={<SingleCharacter />} />
-            <Route path="About" element={<div>sdfgsdfgsdf</div>} />
-            <Route path="Quotes" element={<div></div>} />
+            <Route path="About" element={<About />} />
+            <Route path="Reviews" element={<Reviews />} />
         </Route>
     ));
 

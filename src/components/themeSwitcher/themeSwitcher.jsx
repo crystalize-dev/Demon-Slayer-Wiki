@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import cl from "./themeSwitcher.module.css"
 import classNames from "classnames";
-import {ThemeContext} from "../context/themeContext";
+import {ThemeContext} from "../../context/themeContext";
 import Icon from "../icon/icon";
 
 

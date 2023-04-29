@@ -1,15 +1,30 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    padding: 70px 20px 20px 20px;
+
+    width: 100%;
+    height: 100%;
+}
+
 .videoWrapper {
     display: flex;
     position: relative;
 
-    width: 620px;
+    margin-top: 0;
+
+    width: 670px;
     height: 400px;
 
     transition: all 0.3s ease 0s;
 }
 
 .video {
-    width: calc(100% - 50px);
+    min-width: 620px;
+    width: 100%;
     height: 100%;
     min-height: 400px;
 }
@@ -18,13 +33,14 @@
     margin-top: -50px;
 
     width: 95%;
-    height: 550px;
+    min-height: 95vh;
 }
 
 .fullScreenButton {
     position: absolute;
     right: 0;
     bottom: 0;
+    transform: translateX(100%);
 
     display: flex;
     align-items: center;
@@ -34,7 +50,7 @@
     height: 50px;
 }
 .fullScreenButton > span {
-    color: var(--color);
+    color: var(--font-color);
 
     cursor: pointer;
     transform: scale(1.3);
@@ -63,26 +79,25 @@
 .descriptionWrapper hr {
     width: 90%;
     margin: 20px 0;
-    border: 1px solid var(--color)
+    border: 1px solid var(--font-color)
 }
 
-@media (max-width: 700px) {
-    .fullScreen {
-        width: 100%;
-        height: 100%;
-    }
-    .video {
-        margin: 0 auto;
+.descriptionWrapper p {
+    color: var(--font-color);
+}
 
-        width: 95%;
-        height: 100%;
+@media (max-width: 850px) {
+    .videoWrapper {
+        width: 85vw;
+        min-height: 400px;
+        transition: unset;
     }
 
     .fullScreenButton {
         display: none;
     }
 
-    .descriptionWrapper p {
-        margin: 0 20px;
+    .video {
+        min-width: unset;
     }
 }

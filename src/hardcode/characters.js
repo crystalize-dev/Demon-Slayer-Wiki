@@ -83,7 +83,7 @@ export const characters = [
             " \t\n" +
             "— Obanai Iguro in regards to Mitsuri Kanroji in Sorrowful Love",
         img: obanai,
-        color: "#f0f1fa",
+        color: "#2f3734",
     },
     {
         name: "Sanemi",

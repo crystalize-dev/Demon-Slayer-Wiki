@@ -1,0 +1,132 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    filter: opacity(1);
+    pointer-events: all;
+
+    background: rgba(0,0,0,0.9);
+    z-index: 999999999;
+
+    transition: all 0.2s ease 0s;
+}
+.hide {
+    filter: opacity(0);
+    pointer-events: none;
+}
+
+.window {
+    display: flex;
+    flex-direction: column;
+
+    width: 550px;
+    height: 500px;
+
+    border-radius: 15px;
+
+    background-color: var(--color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+
+    border-bottom: var(--border)
+}
+.header img {
+    height: 50px
+}
+.header p {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--font-color);
+}
+.header > div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header span {
+    color: var(--font-color);
+    font-variation-settings: 'wght' 500;
+    cursor: pointer;
+}
+
+.inputsArea {
+    flex-grow: 1;
+    width: 100%;
+
+    padding: 40px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    border-radius: inherit;
+}
+
+.inputsArea textarea {
+    padding: 20px;
+
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+
+    max-height: 190px;
+
+    border-radius: 8px;
+
+    color: var(--font-color);
+    outline: 1px solid var(--font-color);
+    border: none;
+
+    background: transparent;
+
+    resize: none;
+}
+.inputsArea textarea::-webkit-scrollbar {
+    width: 10px;
+    background: var(--color);
+}
+.inputsArea textarea::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.54);
+    border-radius: 10px;
+    border: 2px solid var(--color)
+}
+
+.submitArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.submitArea button {
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    background: var(--red);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 900px) {
+    .window {
+        border-radius: 0;
+
+        width: 100%;
+        height: 100%;
+    }
+}

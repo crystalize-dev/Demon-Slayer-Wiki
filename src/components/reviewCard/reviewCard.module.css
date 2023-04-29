@@ -1,0 +1,37 @@
+.wrapper {
+    width: 100%;
+    height: fit-content;
+    padding: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+
+    background: var(--color);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+.name {
+    color: var(--font-color);
+}
+.stars {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: fit-content;
+
+    width: 200px;
+}
+.stars span {
+    color: #e1c300;
+    font-variation-settings: 'FILL' 1;
+    transform: scale(1.5);
+}
+
+.wrapper p {
+    color: var(--font-color);
+}
