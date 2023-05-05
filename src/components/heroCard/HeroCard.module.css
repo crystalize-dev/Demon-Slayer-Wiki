@@ -13,7 +13,7 @@
     height: 400px;
     /*max-height: 400px;*/
 
-    background: linear-gradient(var(--background) 1%, var(--color-card));
+    background: linear-gradient(-135deg, var(--background) 1%, var(--color-card));
     border-radius: 10px;
 }
 

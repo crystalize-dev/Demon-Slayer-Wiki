@@ -13,16 +13,17 @@
     display: flex;
     justify-content: space-between;
 
-    padding: 20px;
+    padding: 40px;
 
     margin-top: 150px;
 
     width: 100%;
     height: fit-content;
+    max-height: 70%;
 }
 .imgWrapper::before {
     content: "";
-    border: 1px solid var(--font-color);;
+    border: 1px solid var(--color);
 
     position: absolute;
     bottom: -25px;
@@ -37,17 +38,15 @@
     position: relative;
     height: 100%;
     min-height: 400px;
-    width: 50%;
+    width: 100%;
 
-    z-index: 999;
-
-    background: var(--font-color);
+    z-index: 99999;
 }
 .imgWrapper img {
     height: 100%;
     width: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .textArea {
@@ -56,42 +55,17 @@
     justify-content: center;
 
     padding: 20px;
+    max-width: 50%;
 
     z-index: 1000;
 }
 .textArea h1 {
     font-size: 66px;
-    color: var(--red);
+    text-shadow: 5px 5px black;
 }
 .textArea p {
     font-size: 26px;
     color: var(--font-color);
-}
-
-.comments {
-    margin-top: 20px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-
-    width: 100%;
-    height: fit-content;
-
-    padding: 20px;
-    z-index: 1000;
-}
-.comments p {
-    width: 250px;
-
-    color: var(--font-color);
-    background: var(--color);
-
-    padding: 20px;
-}
-.comments img {
-    height: 100px;
 }
 
 @media (max-width: 1200px) {
@@ -105,29 +79,15 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        gap: 40px;
 
-        height: fit-content;
+        gap: 40px;
     }
 
-    .textArea p:nth-child(3) {
-        margin-top: 40px;
+    .textArea {
+        max-width: unset;
     }
 
     .imgWrapper {
-        height: unset;
-        width: 70%;
-    }
-
-    .comments {
-        flex-wrap: wrap;
-        justify-content: center;
-
-        width: 90%;
-    }
-
-    .comments p {
-        width: 40%;
-        min-height: 280px;
+        width: 100%;
     }
 }

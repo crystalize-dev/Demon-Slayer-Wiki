@@ -8,8 +8,6 @@ const MyInput = ({placeholder, ...props}) => {
             <input {...props}/>
 
             <p>{placeholder}</p>
-
-            <hr/>
         </div>
     );
 };
