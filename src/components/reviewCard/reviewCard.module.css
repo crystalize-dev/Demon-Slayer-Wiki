@@ -35,3 +35,12 @@
 .wrapper p {
     color: var(--font-color);
 }
+
+@media (max-width: 850px) {
+    .wrapper {
+        .header {
+            flex-direction: column;
+            gap: 8px
+        }
+    }
+}

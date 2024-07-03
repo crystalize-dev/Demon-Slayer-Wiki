@@ -10,19 +10,16 @@ const Description = () => {
     return (
         <div className={cl.wrapper}>
             <div
-                className={
-                    fullscreen
-                        ? classNames(cl.videoWrapper, cl.fullScreen)
-                        : cl.videoWrapper
-                }
+                className={classNames(cl.videoWrapper, {
+                    [cl.fullScreen]: fullscreen,
+                })}
             >
                 <iframe
                     src="https://www.youtube.com/embed/VQGCKyvzIM4?start=6"
                     allowFullScreen
                     className={cl.video}
-                    title={"video"}
+                    title="video"
                 />
-
                 <div className={cl.fullScreenButton}>
                     <Icon onClick={() => setFullScreen(!fullscreen)}>
                         {fullscreen ? "fullscreen_exit" : "fullscreen"}
@@ -31,7 +28,7 @@ const Description = () => {
             </div>
 
             <div className={cl.descriptionWrapper}>
-                <img src={logo} alt={"logo"} />
+                <img src={logo} alt="logo" />
                 <hr />
                 <p>
                     The story takes place in Taishō era Japan, where a secret

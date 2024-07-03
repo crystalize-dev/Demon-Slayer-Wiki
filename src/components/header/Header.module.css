@@ -106,4 +106,8 @@
     .header h1 {
         display: none;
     }
+
+    .container {
+        gap: 16px;
+    }
 }

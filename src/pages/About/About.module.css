@@ -110,8 +110,21 @@
         height: fit-content;
     }
 
-    .textArea p:nth-child(3) {
-        margin-top: 40px;
+    .textArea {
+        padding: 0;
+    }
+
+    .textArea h1 {
+        font-size: 48px;
+        text-align: center;
+        text-wrap: balance;
+    }
+
+    .textArea p {
+        margin-top: 20px;
+        font-size: 18px;
+        text-align: center;
+        text-wrap: balance;
     }
 
     .imgWrapper {
@@ -128,6 +141,6 @@
 
     .comments p {
         width: 40%;
-        min-height: 280px;
+        min-width: fit-content;
     }
 }

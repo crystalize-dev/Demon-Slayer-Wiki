@@ -1,13 +1,12 @@
-import React, {useState} from 'react';
-import cl from "./Reviews.module.css"
+import React, { useState } from "react";
+import cl from "./Reviews.module.css";
 import ReviewCard from "../../components/reviewCard/reviewCard";
-import {reviewsScheme} from "../../hardcode/reviews";
+import { reviewsScheme } from "../../hardcode/reviews";
 import ReviewModal from "../../components/reviewModal/reviewModal";
-
 
 const Reviews = () => {
     const [reviews, setReviews] = useState(reviewsScheme);
-    const [modal, setModal] = useState(false)
+    const [modal, setModal] = useState(false);
 
     return (
         <div className={cl.wrapper}>
@@ -17,10 +16,23 @@ const Reviews = () => {
             </div>
 
             <div className={cl.content}>
-                {reviews.map(review => <ReviewCard key={review.id} name={review.name} rate={review.rate} text={review.text} date={review.date}/>)}
+                {reviews.map((review) => (
+                    <ReviewCard
+                        key={review.id}
+                        name={review.name}
+                        rate={review.rate}
+                        text={review.text}
+                        date={review.date}
+                    />
+                ))}
             </div>
 
-            <ReviewModal modal={modal} setModal={setModal} setReviews={setReviews} reviews={reviews}/>
+            <ReviewModal
+                modal={modal}
+                setModal={setModal}
+                setReviews={setReviews}
+                reviews={reviews}
+            />
         </div>
     );
 };

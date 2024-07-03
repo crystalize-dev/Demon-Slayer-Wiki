@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 import cl from "./reviewCard.module.css";
-import {getEmptyStars, getFullStars} from "../../utility/getStars";
+import { getEmptyStars, getFullStars } from "../../utility/getStars";
 
-
-const ReviewCard = ({name, date, rate, text}) => {
-    const keys = [1,2,3,4,5]
-    const keysUnfilled = [6,7,8,9,10]
+const ReviewCard = ({ name, date, rate, text }) => {
+    const keys = [1, 2, 3, 4, 5];
+    const keysUnfilled = [6, 7, 8, 9, 10];
 
     return (
         <div className={cl.wrapper}>
@@ -19,9 +18,7 @@ const ReviewCard = ({name, date, rate, text}) => {
                     {getEmptyStars(rate, keysUnfilled)}
                 </div>
             </div>
-            <p>
-                {text}
-            </p>
+            <p>{text}</p>
         </div>
     );
 };

@@ -26,3 +26,9 @@
 
     filter: opacity(0);
 }
+
+@media (max-width: 850px) {
+    .wrapper {
+        display: none;
+    }
+}
